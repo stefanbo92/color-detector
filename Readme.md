@@ -4,13 +4,13 @@ This is an OpenCV program that can detect the color of objects in an image. It w
 ### Installation:
 You can build this project using CMake by the following commands:
 ```bash
+mkdir build
 cd build
 cmake ..
 make
 ```
 This will compile the code into the build folder. The programs 'train' and 'test' can be simply run by
 ```bash
-cd build
 ./test
 ```
 The 'test' app will load a pretrained SVM modell ("modell.xml") which is already trained on identifying the color of a car. It will load a test image ("data/test.jpg") and classifies the color. Due to copyright reasons I cannot publish the training data set unfortunately.
@@ -21,7 +21,6 @@ Second, you need to put your training images into the folder data with one subfo
 
 Then you can train the SVM by running
 ```bash
-cd build
 ./train
 ```
 which will save a "modell.xml". You can adjust many parameters of the algorithm and the SVM training in "colorDetector.cpp".
